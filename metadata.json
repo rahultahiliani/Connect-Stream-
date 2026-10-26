@@ -1,0 +1,6 @@
+{
+  "name": "ConnectStream - Cybernetic Creator Studio",
+  "description": "Cross-platform video orchestration terminal and synchronized dispatch engine for Instagram Reels and YouTube Shorts creators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,229 @@
+---
+name: Cybernetic Stream
+colors:
+  surface: '#0f131c'
+  surface-dim: '#0f131c'
+  surface-bright: '#353943'
+  surface-container-lowest: '#0a0e17'
+  surface-container-low: '#181b25'
+  surface-container: '#1c1f29'
+  surface-container-high: '#262a34'
+  surface-container-highest: '#31353f'
+  on-surface: '#dfe2ef'
+  on-surface-variant: '#cbc3d7'
+  inverse-surface: '#dfe2ef'
+  inverse-on-surface: '#2c303a'
+  outline: '#958ea0'
+  outline-variant: '#494454'
+  surface-tint: '#d0bcff'
+  primary: '#d0bcff'
+  on-primary: '#3c0091'
+  primary-container: '#a078ff'
+  on-primary-container: '#340080'
+  inverse-primary: '#6d3bd7'
+  secondary: '#4cd7f6'
+  on-secondary: '#003640'
+  secondary-container: '#03b5d3'
+  on-secondary-container: '#00424e'
+  tertiary: '#ffb0cd'
+  on-tertiary: '#640039'
+  tertiary-container: '#f751a1'
+  on-tertiary-container: '#570032'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#e9ddff'
+  primary-fixed-dim: '#d0bcff'
+  on-primary-fixed: '#23005c'
+  on-primary-fixed-variant: '#5516be'
+  secondary-fixed: '#acedff'
+  secondary-fixed-dim: '#4cd7f6'
+  on-secondary-fixed: '#001f26'
+  on-secondary-fixed-variant: '#004e5c'
+  tertiary-fixed: '#ffd9e4'
+  tertiary-fixed-dim: '#ffb0cd'
+  on-tertiary-fixed: '#3e0022'
+  on-tertiary-fixed-variant: '#8c0053'
+  background: '#0f131c'
+  on-background: '#dfe2ef'
+  surface-variant: '#31353f'
+typography:
+  display-hero:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '800'
+    lineHeight: 56px
+  display-hero-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '800'
+    lineHeight: 40px
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 14px
+  metric-display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 34px
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.25rem
+  gutter-mobile: 0.75rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system targets modern digital creators, video producers, and cross-platform growth managers orchestrating presence across visual video ecosystems. It reflects an energetic, futuristic, high-performance ethos where data mastery converges with creative media distribution.
+
+The style unites futuristic dark-mode aesthetics with selective glassmorphism and radiant cybernetic luminescence:
+- **Base Canvas:** Deep obsidian and midnight navy tones create an infinite, low-glare digital studio canvas.
+- **Illumination Model:** Vibrant violet and electric cyan neon accents evoke terminal consoles, dynamic pulse lines, and glowing broadcast indicators.
+- **Surface Quality:** Frosted glass panels layered with subtle translucent borders (`1px` border with low-opacity gradient or white trace) to deliver depth without visual noise.
+- **Emotional Resonance:** High agency, futuristic efficiency, precision control, and cinematic vibrancy.
+
+## Colors
+
+The palette establishes an ultra-deep dark environment with neon spectral highlights that separate content streams, platform identities, and performance metrics:
+
+### Primary & Accent Spectrum
+- **Primary Violet (`#8B5CF6`, `#7C3AED`):** Signals main interactive flows, core brand elements, primary CTA states, and active channel focus.
+- **Secondary Neon Cyan (`#06B6D4`, `#3B82F6`):** Highlights positive metrics, real-time data sync indicators, charts, and secondary callouts.
+- **Tertiary Magenta / Pink (`#EC4899`):** Reserved for high-priority alerts, Instagram-native metrics, viral momentum markers, and critical actions.
+
+### Canvas & Surface Architecture
+- **Canvas Base (`#090D16`):** Deepest obsidian background, providing total immersion and contrast.
+- **Surface Container Base (`#0D111E`):** Distinct layout regions, sidebars, and header bars.
+- **Surface Container Elevated (`#141A29`):** Primary card bodies, metric containers, modal sheets, and data widgets.
+- **Surface Glass / Interactive (`rgba(20, 26, 41, 0.65)`): Backdrop-filtered panels with translucent border glows.
+
+### Platform Identifiers
+- **Instagram Neon:** Radial gradient blend (`#833AB4` to `#FD1D1D` to `#F56040`).
+- **YouTube Vivid Red:** `#FF0000` with subtle ambient red-glow boundary.
+
+## Typography
+
+The typographic hierarchy prioritizes rapid scannability and structural precision. `Plus Jakarta Sans` delivers geometric authority for hero sections, section titles, and analytical metric figures, while `Inter` provides neutral clarity for compact metadata, platform status chips, and tabular values.
+
+Numbers and metric counters must always utilize tabular figures (`tnum`) to eliminate layout jitter during live stream syncs and rapid metric updates. Upper-case labeling is paired with subtle letter-spacing (`+0.05em`) on small tags to preserve legibility against deep dark backgrounds.
+
+## Layout & Spacing
+
+The layout is built upon an 8pt spatial grid configured for high-density creator workflows:
+- **Desktop (1200px+):** Fixed collateral navigation sidebar (`240px`), fluid main operational canvas with a 12-column responsive layout, `1.25rem` (20px) gutters, and `2rem` (32px) margins.
+- **Tablet (768px - 1199px):** Collapsed icon-only sidebar (`72px`), fluid 8-column layout, and `1.25rem` gutters.
+- **Mobile (< 768px):** Single-column vertical stack with persistent glass bottom navigation bar (`64px` height), `0.75rem` (12px) gutters, and `1rem` (16px) margins.
+
+Grid cards stretch to fill modular multi-column blocks (e.g., metric cards span 3 columns each on desktop, media previews span 2 or 3 columns, and deep analytics charts span 6 to 12 columns).
+
+## Elevation & Depth
+
+Visual hierarchy relies on frosted glass layers, translucent edges, and ambient neon back-glow rather than standard dark drop shadows:
+
+1. **Base Layer (Level 0):** Pure `#090D16` matte canvas.
+2. **Structural Glass (Level 1):** `#0D111E` at `80%` opacity with `backdrop-filter: blur(16px)` and a `1px solid rgba(255, 255, 255, 0.06)` perimeter stroke.
+3. **Floating Widgets & Cards (Level 2):** `#141A29` at `90%` opacity with `backdrop-filter: blur(20px)`, `1px solid rgba(139, 92, 246, 0.15)` stroke, and an ambient tinted drop shadow: `0 8px 32px -8px rgba(0, 0, 0, 0.6)`.
+4. **Active & Hover Glows (Level 3):** Interactive cards elevate with an exterior illumination aura: `0 0 24px -4px rgba(124, 58, 237, 0.35)` and boundary stroke `rgba(139, 92, 246, 0.4)`.
+5. **Overlays & Modals (Level 4):** Deep obsidian modal backdrop at `70%` blur, dialog container at `95%` opacity, bordered with dual neon gradient trace (`#8B5CF6` fading to `#06B6D4`).
+
+## Shapes
+
+The design system standardizes on **Rounded (Level 2)** geometry to balance sleek technological precision with modern digital approachability:
+- Standard interactive elements (input fields, dropdowns, list rows) maintain an outer radius of `0.5rem` (8px).
+- Widget surfaces, media card frames, and modal cards adopt `rounded-lg` (`1rem` / 16px).
+- Status chips, navigation pills, and avatar badges use true pill geometry (`9999px`).
+- Media thumbnails within the asset grid inherit an inner radius of `0.5rem` (8px) within the enclosing card.
+
+## Components
+
+### Buttons
+- **Primary Neon CTA:** Gradient fill transitioning from `#7C3AED` to `#6366F1`, white text (`label-lg`), subtle inner top highlight (`1px solid rgba(255, 255, 255, 0.2)`), and ambient purple shadow (`0 4px 16px rgba(124, 58, 237, 0.4)`).
+- **Secondary Glass Action:** Background `rgba(20, 26, 41, 0.8)`, border `1px solid rgba(255, 255, 255, 0.1)`, hover state introduces cyan neon border (`#06B6D4`) and subtle surface lightning.
+- **Ghost/Tertiary:** Transparent background, muted text (`#94A3B8`), hover reveals `rgba(255, 255, 255, 0.05)` fill.
+
+### Metric Widgets & Analytics Cards
+- Card surface at `Level 2` elevation with subtle top gradient border highlight.
+- Header row features a small platform indicator badge (Instagram / YouTube pill) and period toggle.
+- Metrics rendered in `metric-display` scale alongside delta badges (+128% in neon cyan `#06B6D4` pill).
+- Interactive sparklines and area charts rendered with gradient fills fading from neon cyan or violet to transparent.
+
+### Chips & Filter Pills
+- Filter chips sit inside a segmented bar with a unified backdrop (`#0D111E`).
+- Active pill switches to solid `#7C3AED` or high-contrast cyan with white text.
+- Inactive pills maintain transparent fills with `#94A3B8` typography and hover brightening.
+
+### Input Fields & Search Bars
+- Background `#0D111E` with `1px solid rgba(255, 255, 255, 0.1)` border.
+- Focus state activates an electric purple perimeter glow: `border-color: #8B5CF6`, `box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2)`.
+- Icon prefixes (search glass, platform toggles) rendered in muted neon tones.
+
+### Media Library Grid Cards
+- 16:9 and 9:16 aspect containers with overlay status tags (Reel, Short, Story, Video) anchored top-left.
+- Duration tags anchored bottom-right in high-contrast frosted black pills (`rgba(0, 0, 0, 0.75)`).
+- Hover trigger displays an active glowing violet border ring with quick-action overlays (Schedule, Edit, Analytics).
+
+### Platform Status Connectors
+- Dedicated connection cards for Instagram and YouTube.
+- Green status pulse indicator dot (`#10B981`) for synced platforms with active account handles.
+- Action buttons toggle between "Connected" and "Manage" states with high-contrast pill styling.

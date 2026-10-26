@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ConnectStream | Sign In &amp; Account Portal</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#080b11',
+              card: '#0f1422',
+              cardInner: '#141a2b',
+              cyan: '#06b6d4',
+              violet: '#8b5cf6',
+              purple: '#7c3aed',
+              neonPink: '#ec4899',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Visual Effects & Glow Styles -->
+<style data-purpose="ambient-lighting">
+    .glow-cyan-violet {
+      background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.18) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 80%);
+    }
+    .neon-border-glow {
+      box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.25), 0 0 15px -3px rgba(6, 182, 212, 0.2);
+    }
+    .ig-gradient {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    .ig-border-gradient {
+      position: relative;
+      background: linear-gradient(#141a2b, #141a2b) padding-box,
+                  linear-gradient(45deg, #f09433, #dc2743, #bc1888, #8b5cf6) border-box;
+      border: 1.5px solid transparent;
+    }
+    .glass-effect {
+      background: rgba(15, 20, 34, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  </style>
+<!-- END: Custom Visual Effects & Glow Styles -->
+<meta content="web_standard" name="shell-type"/></head>
+<body class="bg-[#080b11] text-slate-100 font-sans min-h-screen relative flex flex-col justify-between overflow-x-hidden antialiased selection:bg-cyan-500 selection:text-white">
+<!-- BEGIN: Ambient Background Glows -->
+<div aria-hidden="true" class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-40 left-1/4 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[140px]"></div>
+<div class="absolute top-1/3 -right-40 w-[550px] h-[550px] bg-cyan-600/15 rounded-full blur-[150px]"></div>
+<div class="absolute -bottom-20 left-1/3 w-[700px] h-[700px] bg-violet-700/10 rounded-full blur-[160px]"></div>
+<!-- Subtle cyber grid overlay -->
+<div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+</div>
+<!-- END: Ambient Background Glows -->
+<!-- BEGIN: MainHeader -->
+<header class="relative z-10 w-full px-6 lg:px-12 py-5 flex items-center justify-between border-b border-white/5 glass-effect">
+<!-- Brand Logo -->
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-violet-600 via-indigo-500 to-cyan-400 p-[1.5px] shadow-lg shadow-violet-500/20">
+<div class="w-full h-full bg-[#080b11] rounded-[10px] flex items-center justify-center">
+<!-- Infinity / Stream Synced Icon SVG -->
+<svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M12 12c-2-2.5-5-4-8-4a6 6 0 0 0 0 12c3 0 6-1.5 8-4z"></path>
+<path d="M12 12c2 2.5 5 4 8 4a6 6 0 0 0 0-12c-3 0-6 1.5-8 4z"></path>
+</svg>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-white">Connect<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">Stream</span></span>
+<span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase text-cyan-300 bg-cyan-950/60 border border-cyan-500/30 rounded-md">Creator Engine</span>
+</div>
+</div>
+<!-- Header Actions & Support -->
+<div class="flex items-center gap-5 text-sm">
+<!-- Language Selector -->
+<div class="relative hidden sm:flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-slate-200 transition-colors cursor-pointer bg-white/5 px-3 py-1.5 rounded-lg border border-white/5">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+<span>EN (US)</span>
+</div>
+<!-- Need Help / Support Link -->
+<a class="text-xs sm:text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1.5" href="#support">
+<span>Need help?</span>
+<span class="text-white hover:underline underline-offset-4">Studio Support</span>
+</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="relative z-10 flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-10 my-4"><div class="flex flex-col w-full">
+<!-- BEGIN: Ambient Background Glows & Accent Blooms -->
+<div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-16">
+<!-- Hero Header & Billing Switch -->
+<header class="relative flex flex-col items-center text-center pt-4 pb-2">
+<!-- Accent Category Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high shadow-sm mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Synchronized Dispatch Engine</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight max-w-4xl">
+        Transparent Pricing for <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-tertiary">Creators &amp; Media Studios</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-outline max-w-2xl mt-4 leading-relaxed">
+        Scale your cross-platform presence across Instagram &amp; YouTube with automated dispatch, synchronized telemetry, and AI tools.
+      </p>
+<!-- Trust Badges Under Title -->
+<div class="flex flex-wrap items-center justify-center gap-6 mt-6 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">verified</span>
+          14-Day Free Trial
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">security</span>
+          SOC2 Type II Certified
+        </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span>
+          99.98% Sync Reliability
+        </span>
+</div>
+<!-- Billing Toggle Component -->
+<div class="mt-10 flex flex-col sm:flex-row items-center gap-4 p-1.5 rounded-2xl bg-surface-container-lowest shadow-md">
+<div class="flex items-center p-1 rounded-xl bg-surface-container">
+<button class="billing-btn active px-6 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all duration-300 text-on-primary bg-primary-container shadow-sm" id="monthly-toggle" onclick="setBilling('monthly')" type="button">
+            Monthly Billing
+          </button>
+<button class="billing-btn px-6 py-2 rounded-lg font-label-md text-label-md font-medium text-outline transition-all duration-300 hover:text-on-surface" id="annual-toggle" onclick="setBilling('annual')" type="button">
+            Annual Billing
+          </button>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-secondary-container/20">
+<span class="material-symbols-outlined text-secondary text-sm">stars</span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight text-secondary">Save 20% + 2 Months Free</span>
+</div>
+</div>
+</header>
+<!-- Pricing Grid (4 Cards) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+<!-- Tier 1: Starter / Solo Creator -->
+<div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-surface-container shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Tier 01</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">videocam</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">Starter Solo</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 min-h-[36px]">Ideal for solo creators starting cross-posting and dual automation.</p>
+<!-- Price Display -->
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight price-starter">$19</span>
+<span class="font-label-md text-label-md text-outline">/ month</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary min-h-[16px] mt-1 starter-cadence">Billed monthly</p>
+</div>
+<!-- Feature Bullets -->
+<div class="space-y-3 pt-4 bg-surface-container-low p-4 rounded-xl">
+<div class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">Features included</div>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span><strong>2 Connected Channels</strong> (1 IG + 1 YT)</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Up to 60 Scheduled Posts &amp; Reels / mo</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Standard 1080p transcode queue</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Basic Engagement &amp; Audience Telemetry</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>10GB Cloud Media Storage</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Community Discord Support</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3.5 px-4 rounded-xl font-label-lg text-label-lg font-semibold bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary shadow-sm transition-all duration-200" type="button">
+            Start 14-Day Free Trial
+          </button>
+</div>
+</div>
+<!-- Tier 2: Pro Studio (POPULAR / FEATURED CARD) -->
+<div class="relative flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-surface-container-high shadow-2xl transition-all duration-300 scale-100 xl:scale-[1.03] z-10">
+<!-- Ambient Top Glow Pill -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-primary via-secondary to-tertiary shadow-lg text-on-primary font-label-sm text-label-sm font-extrabold uppercase tracking-wider flex items-center gap-1.5 whitespace-nowrap">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+          Most Popular • Best for Growth
+        </div>
+<div>
+<div class="flex items-center justify-between mb-4 mt-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Tier 02</span>
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-extrabold flex items-center gap-2">
+            Pro Studio
+            <span class="px-2 py-0.5 rounded text-[10px] bg-primary/20 text-primary uppercase font-bold tracking-wider">Fast Lane</span>
+</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 min-h-[36px]">For high-cadence producers, daily vloggers, and active influencers.</p>
+<!-- Price Display -->
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight price-pro">$49</span>
+<span class="font-label-md text-label-md text-outline">/ month</span>
+</div>
+<p class="font-label-sm text-label-sm text-primary min-h-[16px] mt-1 pro-cadence">Billed monthly</p>
+</div>
+<!-- Feature Bullets -->
+<div class="space-y-3 pt-4 bg-surface-container-lowest p-4 rounded-xl shadow-inner">
+<div class="font-label-sm text-label-sm font-semibold uppercase text-primary tracking-wider flex items-center justify-between">
+<span>Everything in Starter, plus:</span>
+</div>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span><strong>5 Connected Accounts</strong> (IG &amp; YT flexible)</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span><strong>Unlimited</strong> Scheduled Posts, Reels &amp; 4K Shorts</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Priority GPU Cloud Transcoder (4K 60fps &amp; HDR)</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>AI Caption &amp; Viral Hashtag Assistant</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Real-Time Cross-Stream Sync &amp; Edge Health</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>100GB Cloud Media Vault</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Auto-failover &amp; API Rate-limit Shield</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span>Priority Support (&lt; 1h SLA response)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-4 px-4 rounded-xl font-label-lg text-label-lg font-bold bg-primary-container text-on-primary hover:bg-primary hover:text-on-primary-container shadow-lg shadow-primary-container/30 transition-all duration-200" type="button">
+            Get Started with Pro
+          </button>
+</div>
+</div>
+<!-- Tier 3: Agency & Media Network -->
+<div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-surface-container shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Tier 03</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors">hub</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">Agency &amp; Network</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 min-h-[36px]">Built for record labels, digital agencies, and creator collectives.</p>
+<!-- Price Display -->
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight price-agency">$129</span>
+<span class="font-label-md text-label-md text-outline">/ month</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary min-h-[16px] mt-1 agency-cadence">Billed monthly</p>
+</div>
+<!-- Feature Bullets -->
+<div class="space-y-3 pt-4 bg-surface-container-low p-4 rounded-xl">
+<div class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">Agency infrastructure</div>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span><strong>Up to 20 Connected Accounts</strong></span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Dedicated Sub-30ms Relay Worker Nodes</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Demographic Telemetry &amp; CSV/JSON Export</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span><strong>10 Creator Seats</strong> with Role Permissions</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>1TB Enterprise Media Storage Vault</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Custom Webhooks &amp; Full REST API Access</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Dedicated Account Partner</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3.5 px-4 rounded-xl font-label-lg text-label-lg font-semibold bg-surface-container-high text-on-surface hover:bg-secondary-container hover:text-on-secondary-container shadow-sm transition-all duration-200" type="button">
+            Launch Agency Plan
+          </button>
+</div>
+</div>
+<!-- Tier 4: Enterprise / Custom -->
+<div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Tier 04</span>
+<span class="material-symbols-outlined text-outline">dns</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">Enterprise</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1.5 min-h-[36px]">Mission-critical broadcasting and custom video distribution pipelines.</p>
+<!-- Price Display -->
+<div class="my-6">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-headline-xl text-on-surface font-extrabold tracking-tight">Custom</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline min-h-[16px] mt-1">Tailored SLA &amp; Volume Quotas</p>
+</div>
+<!-- Feature Bullets -->
+<div class="space-y-3 pt-4 bg-surface-container p-4 rounded-xl">
+<div class="font-label-sm text-label-sm font-semibold uppercase text-outline tracking-wider">Custom capabilities</div>
+<ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-base">check_circle</span>
+<span>Unlimited Managed Channels</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-base">check_circle</span>
+<span>99.99% Uptime Guarantee with Custom SLA</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-base">check_circle</span>
+<span>SOC2 Type II Audit Logs &amp; SSO/SAML</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-base">check_circle</span>
+<span>Private Cloud or On-Prem Transcoding</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-base">check_circle</span>
+<span>Direct Slack Channel with Core Engineers</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3.5 px-4 rounded-xl font-label-lg text-label-lg font-semibold bg-surface-container-high text-on-surface hover:bg-surface-bright transition-all duration-200" type="button">
+            Contact Studio Sales
+          </button>
+</div>
+</div>
+</section>
+<!-- Visual Dashboard Showcase Section -->
+<section class="mt-6 p-8 sm:p-12 rounded-3xl bg-surface-container-low shadow-xl overflow-hidden relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Showcase Info -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary w-fit font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">speed</span>
+            Telemetry Control Core
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold">
+            Unified Signal Routing for YouTube &amp; Instagram
+          </h2>
+<p class="font-body-md text-body-md text-outline">
+            Experience complete cross-platform dominance. ConnectStream monitors your ingestion status, rate limits, audio codecs, and visual analytics concurrently across both ecosystems.
+          </p>
+<div class="grid grid-cols-2 gap-4 mt-2">
+<div class="p-3.5 rounded-xl bg-surface-container">
+<span class="font-metric-display text-metric-display text-secondary font-bold">14.8M+</span>
+<p class="font-label-sm text-label-sm text-outline mt-1">Cross-Platform Views</p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container">
+<span class="font-metric-display text-metric-display text-primary font-bold">99.98%</span>
+<p class="font-label-sm text-label-sm text-outline mt-1">Sync Reliability</p>
+</div>
+</div>
+</div>
+<!-- Showcase Image Display -->
+<div class="lg:col-span-7 relative group">
+<div class="overflow-hidden rounded-2xl bg-surface-container-lowest shadow-2xl">
+<img alt="ConnectStream Neon Dashboard Showcase" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvFMV30xoz5cIaP6X7IdvIM8R2hKXQ0ui02JF_jB7-TCO-IcfAXjvWoiigDAoOPc-cCjR8Z2LbRPLVzp7CfOcWOKrA_axPzwnN6--tnMIjnR6pfk6cUztjHW_2FgnRPx_ktKDQxdnobH_n4eYd6EFr6OrqnFgFEJWNjfU3_n6LSNKnfQO0us4sSfTA6Jho3LEmnIMZJ0Cfps9FjtiQ76WRS9x_88WB1fh5iTNPrglcnXYs-Il6mfOwqvtE1XGNgZqXrQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Feature Comparison Matrix -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Compare Complete Feature Matrix</h2>
+<p class="font-body-md text-body-md text-outline">A deep-dive view into the technical dispatch capabilities, bandwidth, and API safeguards.</p>
+</div>
+<div class="overflow-x-auto rounded-2xl bg-surface-container shadow-md">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high text-on-surface">
+<th class="p-4 sm:p-5 font-headline-sm text-headline-sm">Capability / Spec</th>
+<th class="p-4 sm:p-5 font-headline-sm text-headline-sm text-secondary">Starter</th>
+<th class="p-4 sm:p-5 font-headline-sm text-headline-sm text-primary">Pro Studio</th>
+<th class="p-4 sm:p-5 font-headline-sm text-headline-sm text-on-surface">Agency Network</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Section Header -->
+<tr class="bg-surface-container-low">
+<td class="p-3.5 px-5 font-label-md text-label-md font-bold uppercase tracking-wider text-secondary" colspan="4">
+                1. Channels &amp; Dispatch Ecosystem
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Connected Channels</td>
+<td class="p-4 px-5 text-on-surface-variant">2 (1 IG + 1 YT)</td>
+<td class="p-4 px-5 text-primary font-semibold">5 Flexible</td>
+<td class="p-4 px-5 text-on-surface">Up to 20</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Reels &amp; Shorts Auto-Sync</td>
+<td class="p-4 px-5 text-on-surface-variant">60 / month</td>
+<td class="p-4 px-5 text-primary font-semibold">Unlimited</td>
+<td class="p-4 px-5 text-on-surface">Unlimited</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Instagram Stories &amp; Carousels</td>
+<td class="p-4 px-5 text-outline">Carousels Only</td>
+<td class="p-4 px-5 text-primary font-semibold">Both (Full Support)</td>
+<td class="p-4 px-5 text-on-surface">Both + Bulk Uploader</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Max Output Resolution</td>
+<td class="p-4 px-5 text-on-surface-variant">1080p Full HD</td>
+<td class="p-4 px-5 text-primary font-semibold">4K 60fps HDR</td>
+<td class="p-4 px-5 text-on-surface">4K 60fps HDR Master</td>
+</tr>
+<!-- Section Header -->
+<tr class="bg-surface-container-low">
+<td class="p-3.5 px-5 font-label-md text-label-md font-bold uppercase tracking-wider text-primary" colspan="4">
+                2. Automation &amp; AI Assist
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Cloud Transcode Queue Priority</td>
+<td class="p-4 px-5 text-on-surface-variant">Standard</td>
+<td class="p-4 px-5 text-primary font-semibold">GPU Priority Lane</td>
+<td class="p-4 px-5 text-on-surface">Dedicated Node Pool</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">AI Caption &amp; Hashtag Generator</td>
+<td class="p-4 px-5 text-outline">25 generations / mo</td>
+<td class="p-4 px-5 text-primary font-semibold">Unlimited (GPT-4o Vision)</td>
+<td class="p-4 px-5 text-on-surface">Unlimited + Custom Voice Prompt</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Smart Audio &amp; Loudness Normalization</td>
+<td class="p-4 px-5 text-outline"><span class="material-symbols-outlined text-outline text-base">remove</span></td>
+<td class="p-4 px-5 text-primary font-semibold"><span class="material-symbols-outlined text-primary text-base">check_circle</span></td>
+<td class="p-4 px-5 text-on-surface"><span class="material-symbols-outlined text-on-surface text-base">check_circle</span></td>
+</tr>
+<!-- Section Header -->
+<tr class="bg-surface-container-low">
+<td class="p-3.5 px-5 font-label-md text-label-md font-bold uppercase tracking-wider text-tertiary" colspan="4">
+                3. Telemetry &amp; Safeguards
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Instagram Graph &amp; YT API Shield</td>
+<td class="p-4 px-5 text-on-surface-variant">Standard Auto-Retry</td>
+<td class="p-4 px-5 text-primary font-semibold">Adaptive Rate-Limit Buffer</td>
+<td class="p-4 px-5 text-on-surface">Dedicated Proxy Relays</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Audience Demographic Analysis</td>
+<td class="p-4 px-5 text-outline">Top 3 Countries</td>
+<td class="p-4 px-5 text-primary font-semibold">Deep Cross-Demographics</td>
+<td class="p-4 px-5 text-on-surface">Full Drilldown + Trend Predictions</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Data Export &amp; Custom Reports</td>
+<td class="p-4 px-5 text-outline"><span class="material-symbols-outlined text-outline text-base">remove</span></td>
+<td class="p-4 px-5 text-primary font-semibold">PDF Reports</td>
+<td class="p-4 px-5 text-on-surface">Automated CSV / JSON Data Feed</td>
+</tr>
+<!-- Section Header -->
+<tr class="bg-surface-container-low">
+<td class="p-3.5 px-5 font-label-md text-label-md font-bold uppercase tracking-wider text-on-surface" colspan="4">
+                4. Storage, Team &amp; SLA
+              </td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Media Storage Vault</td>
+<td class="p-4 px-5 text-on-surface-variant">10GB NVMe Cloud</td>
+<td class="p-4 px-5 text-primary font-semibold">100GB NVMe Cloud</td>
+<td class="p-4 px-5 text-on-surface">1TB Multi-Region Vault</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Team Creator Seats</td>
+<td class="p-4 px-5 text-on-surface-variant">1 Seat</td>
+<td class="p-4 px-5 text-primary font-semibold">2 Seats (Collaborator mode)</td>
+<td class="p-4 px-5 text-on-surface">10 Seats + Custom Roles</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Developer Webhooks &amp; REST API</td>
+<td class="p-4 px-5 text-outline"><span class="material-symbols-outlined text-outline text-base">remove</span></td>
+<td class="p-4 px-5 text-outline">Standard Webhooks (Read only)</td>
+<td class="p-4 px-5 text-on-surface font-semibold">Full Bidirectional REST API</td>
+</tr>
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="p-4 px-5 text-on-surface font-medium">Service Level Agreement (SLA)</td>
+<td class="p-4 px-5 text-outline">Standard</td>
+<td class="p-4 px-5 text-primary font-semibold">99.9% Uptime Target</td>
+<td class="p-4 px-5 text-on-surface font-semibold">99.98% Contractual Guarantee</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Frequently Asked Questions Accordion -->
+<section class="flex flex-col gap-6 max-w-4xl mx-auto w-full">
+<div class="text-center flex flex-col gap-2">
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-outline">Everything you need to know about billing, channel limits, and platform security.</p>
+</div>
+<div class="flex flex-col gap-3 mt-4">
+<!-- Question 1 -->
+<div class="rounded-xl bg-surface-container p-5 transition-all cursor-pointer faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Can I switch between monthly and annual plans anytime?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="mt-3 text-on-surface-variant font-body-md text-body-md hidden faq-answer">
+            Yes! You can upgrade, downgrade, or switch billing frequency directly within your Account Settings. If you switch from monthly to annual mid-cycle, any remaining prorated balance is credited automatically against your annual invoice.
+          </div>
+</div>
+<!-- Question 2 -->
+<div class="rounded-xl bg-surface-container p-5 transition-all cursor-pointer faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">How does Instagram and YouTube API rate limit protection work?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="mt-3 text-on-surface-variant font-body-md text-body-md hidden faq-answer">
+            ConnectStream deploys an intelligent pacing engine that monitors real-time quota telemetry on both the Instagram Graph API and YouTube Data v3 API. If Meta or Google throttle request speeds, our system queues and staggers your publishing bursts without failing your scheduled time slots.
+          </div>
+</div>
+<!-- Question 3 -->
+<div class="rounded-xl bg-surface-container p-5 transition-all cursor-pointer faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">What happens if I exceed my scheduled post quota or storage?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="mt-3 text-on-surface-variant font-body-md text-body-md hidden faq-answer">
+            You will receive a notification at 80% and 95% capacity. We never cancel your scheduled uploads unexpectedly. If you exceed limits, you can either upgrade instantly to Pro/Agency with one click or add a flexible high-capacity storage pack for $5/month per 50GB.
+          </div>
+</div>
+<!-- Question 4 -->
+<div class="rounded-xl bg-surface-container p-5 transition-all cursor-pointer faq-item" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between gap-4">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Is there a free trial without credit card required?</h4>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 faq-icon">expand_more</span>
+</div>
+<div class="mt-3 text-on-surface-variant font-body-md text-body-md hidden faq-answer">
+            Yes, our 14-day free trial on Starter and Pro Studio tiers gives you immediate access to test automated dispatch and video transcoding without entering any payment credentials upfront. You only choose a plan when your trial completes.
+          </div>
+</div>
+</div>
+</section>
+<!-- Enterprise & Studio Guarantee Banner -->
+<section class="p-8 sm:p-10 rounded-2xl bg-surface-container-high shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-inner">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Risk-Free 14-Day Money Back Guarantee</h3>
+<p class="font-body-sm text-body-sm text-outline mt-1">If ConnectStream doesn't accelerate your cross-posting workflow, contact our concierge for a 100% full refund.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto">
+<button class="w-full md:w-auto px-6 py-3 rounded-xl font-label-md text-label-md font-bold bg-primary text-on-primary hover:bg-primary-fixed transition-colors" type="button">
+          Start Free Now
+        </button>
+</div>
+</section>
+</div>
+<!-- END: Main Content Wrapper -->
+<!-- Client-side Interactive Script for Billing Toggle & FAQ Accordion -->
+<script>
+    function setBilling(interval) {
+      const monthlyBtn = document.getElementById('monthly-toggle');
+      const annualBtn = document.getElementById('annual-toggle');
+      
+      const priceStarter = document.querySelector('.price-starter');
+      const pricePro = document.querySelector('.price-pro');
+      const priceAgency = document.querySelector('.price-agency');
+
+      const cadenceStarter = document.querySelector('.starter-cadence');
+      const cadencePro = document.querySelector('.pro-cadence');
+      const cadenceAgency = document.querySelector('.agency-cadence');
+
+      if (interval === 'annual') {
+        // Toggle Active Classes
+        annualBtn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        annualBtn.classList.remove('text-outline', 'font-medium');
+
+        monthlyBtn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        monthlyBtn.classList.add('text-outline', 'font-medium');
+
+        // Update Prices
+        if (priceStarter) priceStarter.textContent = '$15';
+        if (pricePro) pricePro.textContent = '$39';
+        if (priceAgency) priceAgency.textContent = '$99';
+
+        if (cadenceStarter) cadenceStarter.textContent = 'Billed annually ($180/yr)';
+        if (cadencePro) cadencePro.textContent = 'Billed annually ($468/yr)';
+        if (cadenceAgency) cadenceAgency.textContent = 'Billed annually ($1,188/yr)';
+      } else {
+        monthlyBtn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        monthlyBtn.classList.remove('text-outline', 'font-medium');
+
+        annualBtn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        annualBtn.classList.add('text-outline', 'font-medium');
+
+        // Update Prices
+        if (priceStarter) priceStarter.textContent = '$19';
+        if (pricePro) pricePro.textContent = '$49';
+        if (priceAgency) priceAgency.textContent = '$129';
+
+        if (cadenceStarter) cadenceStarter.textContent = 'Billed monthly';
+        if (cadencePro) cadencePro.textContent = 'Billed monthly';
+        if (cadenceAgency) cadenceAgency.textContent = 'Billed monthly';
+      }
+    }
+
+    function toggleFaq(element) {
+      const answer = element.querySelector('.faq-answer');
+      const icon = element.querySelector('.faq-icon');
+      
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+</div></main>
+<!-- END: MainContent -->
+<!-- BEGIN: MainFooter -->
+<footer class="relative z-10 w-full px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 border-t border-white/5 glass-effect">
+<div>
+<span>© 2026 ConnectStream Creator Technologies Inc. All rights reserved.</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-slate-300 transition-colors" href="#privacy">Privacy Notice</a>
+<a class="hover:text-slate-300 transition-colors" href="#terms">Creator Terms</a>
+<a class="flex items-center gap-1.5 hover:text-slate-300 transition-colors" href="#status">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>Systems Operational</span>
+</a>
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>

@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #0f131c;
+    --color-surface-dim: #0f131c;
+    --color-surface-bright: #353943;
+    --color-surface-lowest: #0a0e17;
+    --color-surface-low: #181b25;
+    --color-surface-container: #1c1f29;
+    --color-surface-high: #262a34;
+    --color-surface-highest: #31353f;
+    --color-on-surface: #dfe2ef;
+    --color-on-surface-variant: #cbc3d7;
+    --color-primary: #d0bcff;
+    --color-primary-container: #a078ff;
+    --color-secondary: #4cd7f6;
+    --color-secondary-container: #03b5d3;
+    --color-tertiary: #ffb0cd;
+    --color-tertiary-container: #f751a1;
+    --color-outline: #958ea0;
+  }
+
+  body {
+    background-color: #080b11;
+    color: #dfe2ef;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Cybernetic glows and glass gradients */
+.glow-cyan-violet {
+  background: radial-gradient(circle at 50% 50%, rgba(160, 120, 255, 0.16) 0%, rgba(76, 215, 246, 0.08) 50%, transparent 80%);
+}
+
+.neon-border-glow {
+  box-shadow: 0 0 25px -5px rgba(160, 120, 255, 0.28), 0 0 15px -3px rgba(76, 215, 246, 0.22);
+}
+
+.ig-gradient {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.ig-border-gradient {
+  position: relative;
+  background: linear-gradient(#141a2b, #141a2b) padding-box,
+              linear-gradient(45deg, #f09433, #dc2743, #bc1888, #8b5cf6) border-box;
+  border: 1.5px solid transparent;
+}
+
+.glass-panel {
+  background: rgba(20, 26, 41, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-elevated {
+  background: rgba(24, 30, 48, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(160, 120, 255, 0.18);
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e17;
+}
+::-webkit-scrollbar-thumb {
+  background: #262a34;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a078ff;
+}

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2ef","surface-container-low":"#181b25","surface-container-highest":"#31353f","surface":"#0f131c","on-primary-fixed":"#23005c","on-error":"#690005","on-background":"#dfe2ef","outline-variant":"#494454","error":"#ffb4ab","secondary-fixed-dim":"#4cd7f6","inverse-primary":"#6d3bd7","secondary":"#4cd7f6","surface-bright":"#353943","tertiary":"#ffb0cd","tertiary-fixed":"#ffd9e4","surface-variant":"#31353f","background":"#0f131c","surface-container-lowest":"#0a0e17","secondary-container":"#03b5d3","surface-tint":"#d0bcff","primary-fixed-dim":"#d0bcff","inverse-surface":"#dfe2ef","primary-container":"#a078ff","tertiary-fixed-dim":"#ffb0cd","on-error-container":"#ffdad6","on-tertiary":"#640039","on-tertiary-fixed":"#3e0022","on-primary-fixed-variant":"#5516be","inverse-on-surface":"#2c303a","primary-fixed":"#e9ddff","secondary-fixed":"#acedff","on-primary":"#3c0091","outline":"#958ea0","on-secondary-container":"#00424e","surface-container":"#1c1f29","surface-container-high":"#262a34","on-secondary-fixed":"#001f26","tertiary-container":"#f751a1","primary":"#d0bcff","on-tertiary-container":"#570032","on-primary-container":"#340080","error-container":"#93000a","on-secondary-fixed-variant":"#004e5c","on-secondary":"#003640","surface-dim":"#0f131c","on-tertiary-fixed-variant":"#8c0053","on-surface-variant":"#cbc3d7"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem",gutter:"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","space-xl":"2rem","space-sm":"0.5rem",margin:"2rem","space-md":"1rem","gutter-mobile":"0.75rem"},fontFamily:{"metric-display":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"]},fontSize:{"metric-display":["28px",{lineHeight:"34px",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-xl":["32px",{lineHeight:"40px",fontWeight:"700"}],"headline-lg":["24px",{lineHeight:"32px",fontWeight:"700"}],"display-hero":["48px",{lineHeight:"56px",fontWeight:"800"}],"display-hero-mobile":["32px",{lineHeight:"40px",fontWeight:"800"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="product" href="#"><div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shadow-[0_0_16px_rgba(160,120,255,0.25)]"><span class="material-symbols-outlined text-primary text-[24px]">stream</span></div><span class="font-headline-md text-headline-md tracking-tight text-on-surface">Connect<span class="text-secondary">Stream</span></span></a><nav class="hidden md:flex items-center gap-space-lg ml-space-md" data-active-classes="text-primary font-headline-sm"><a aria-current="page" class="transition-colors text-primary font-headline-sm" data-path="product" href="#">Product</a><a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a><a class="font-headline-sm text-headline-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Resources</a></nav></div><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="sign-in" href="#">Sign In</a><a class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg shadow-[0_0_20px_rgba(160,120,255,0.45)] hover:bg-primary hover:text-on-primary transition-all" data-path="get-started-free" href="#">Get Started Free</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<!-- Top Ambient Glows (Contained) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-primary-container/15 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-24 -left-48 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-96 -right-48 w-[450px] h-[450px] bg-tertiary-container/10 rounded-full blur-[130px] pointer-events-none"></div>
+<!-- HERO SECTION -->
+<section class="relative max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-xl flex flex-col items-center text-center">
+<!-- Version Pill Badge -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high shadow-[0_0_20px_rgba(160,120,255,0.2)] mb-space-lg">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,0.9)] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">NEXT-GEN CROSS-SYNC ENGINE V3.4</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm opacity-50">/</span>
+<span class="font-label-sm text-label-sm text-primary">ZERO LATENCY</span>
+</div>
+<!-- Hero Headline with Punchy Contrast -->
+<h1 class="font-display-hero text-display-hero max-w-4xl tracking-tight text-on-surface mb-space-md">
+        Your Social Media, <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-primary via-primary-container to-secondary bg-clip-text text-transparent">Unified.</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed">
+        Automate dispatch across Instagram Reels &amp; YouTube Shorts. Manage multi-channel pipelines, sync schedules, and analyze growth from one cinematic control hub.
+      </p>
+<!-- CTA Actions Row -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mb-space-xl z-10">
+<a class="px-space-xl py-space-md rounded-xl bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-on-primary font-label-lg text-label-lg shadow-[0_0_30px_rgba(160,120,255,0.45)] hover:shadow-[0_0_40px_rgba(160,120,255,0.7)] hover:scale-[1.02] transition-all flex items-center gap-space-sm" data-path="get-started-free" href="#">
+<span>Get Started Free</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<button class="px-space-lg py-space-md rounded-xl bg-surface-container-high/90 text-on-surface font-label-lg text-label-lg hover:bg-surface-bright shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all flex items-center gap-space-sm" id="open-demo-modal">
+<span class="material-symbols-outlined text-secondary text-[22px]">play_circle</span>
+<span>Watch 2-Min Demo</span>
+</button>
+</div>
+<!-- Dual Orchestration Hero Visual Device Mockup -->
+<div class="relative w-full max-w-5xl mt-space-sm">
+<!-- Glowing Ambient Console Frame -->
+<div class="relative rounded-2xl bg-surface-container-lowest p-space-xs sm:p-space-sm shadow-[0_12px_60px_-10px_rgba(0,0,0,0.9),0_0_40px_rgba(160,120,255,0.15)]">
+<!-- Mockup Top Bar -->
+<div class="w-full bg-surface-container-low px-space-md py-space-xs rounded-t-xl flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-error/80"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary/80"></span>
+<span class="w-3 h-3 rounded-full bg-secondary/80"></span>
+<span class="ml-space-sm font-label-sm text-label-sm text-on-surface-variant/60 font-mono tracking-tight">core.connectstream.studio // live-session #8849</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                ACTIVE PIPELINE
+              </span>
+</div>
+</div>
+<!-- Master Control Canvas Mockup Screen -->
+<div class="relative w-full bg-surface rounded-xl overflow-hidden p-space-md sm:p-space-lg text-left">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Video Reel Preview: Instagram -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md shadow-inner flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">photo_camera</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Instagram Reel</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">SYNC READY</span>
+</div>
+<div class="relative w-full aspect-[9/14] rounded-lg overflow-hidden bg-surface-container-high group">
+<img class="w-full h-full object-cover" data-alt="High quality vertical cinematic 9:16 video capture of a futuristic cyberpunk city with neon lavender and electric cyan reflective lights, creator studio workflow style, dynamic motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCen_d6b3Er6Sw4DdhUPRCyIb2uH2UFju7k6ZgyKAlAv3cdeOBtoctThrcxNPfh3gmMNN-m_D19N8X4SA3WNYYaO845rQflWNUDK1lJ-FAyovHPsgM2dchbZCDCmF26I6Dt4musspjvsQgH14TcuIv0rDzUeVw7rjCQXO9A1T8UesYFWglTGAo8N2hnFULMfv_m0B39scjE36w2YGliWiM5UzIgR58NGF4DPPw4Hrc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-black/30 flex flex-col justify-between p-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest/70 backdrop-blur-md text-on-surface font-label-sm text-label-sm">9:16 Vertical</span>
+<span class="material-symbols-outlined text-on-surface text-[20px]">equalizer</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Neon Overdrive Vol. 4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Auto-tagged #Cyberpunk #Production</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scheduled: 18:30 GMT</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% Quality Match</span>
+</div>
+</div>
+<!-- Center Gateway Link Sync Animation Indicator -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center py-space-md text-center">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high shadow-[0_0_30px_rgba(160,120,255,0.4)] flex items-center justify-center mb-space-md relative">
+<span class="material-symbols-outlined text-primary text-[32px] animate-spin" style="animation-duration: 6s;">sync_saved_locally</span>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,1)]"></div>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Simultaneous Transcoding</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mb-space-md">Real-time bitstream transformation with custom metadata and aspect reframing</p>
+<!-- Status Progress Strip -->
+<div class="w-full max-w-xs bg-surface-container-highest rounded-full h-2 mb-space-xs overflow-hidden">
+<div class="bg-gradient-to-r from-primary via-secondary to-tertiary h-full w-[84%] rounded-full shadow-[0_0_12px_rgba(76,215,246,0.8)]"></div>
+</div>
+<div class="flex justify-between w-full max-w-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Re-encoding 4K ProRes</span>
+<span class="text-secondary font-semibold">84% Synced</span>
+</div>
+</div>
+<!-- Right Video Preview: YouTube Shorts -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-md shadow-inner flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">smart_display</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">YouTube Shorts</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm">LIVE PIPELINE</span>
+</div>
+<div class="relative w-full aspect-[9/14] rounded-lg overflow-hidden bg-surface-container-high group">
+<img class="w-full h-full object-cover" data-alt="High tech cinematic vertical frame showing an electronic music mixing desk and visual synthesizers bathed in deep purple and cyan neon, video production perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR9yftegIfrI9nEFa0mZbzjn2US5sX5MP2XoKZfehWkeO0rFiIMsTebWSb-49bj4G5fe1nFnwYb2nkdMVDcI7oRq5OEtmpJLlx9-fqjqUG9_N7SvPkUM4_MhZzmUmwxd84khqDeGJYO8DZyQ2So1xOWD7Yhi3djPrGA3GsBBmj6jYvCtvResGw1q2TU2dofiy2JY83EY8ds6btW34kjvlSNhkbMFvAT9EL8amdBOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-black/30 flex flex-col justify-between p-space-sm">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest/70 backdrop-blur-md text-on-surface font-label-sm text-label-sm">Shorts Feed</span>
+<span class="material-symbols-outlined text-on-surface text-[20px]">subtitles</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-on-surface block font-semibold">Neon Overdrive Vol. 4 [4K 60FPS]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Pinned pinned comment &amp; chapter tags</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant Deploy Queue</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Monetization Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Floating Cards (Desynchronized Asymmetry) -->
+<div class="absolute -top-6 -left-4 sm:-left-8 bg-surface-container-high/90 backdrop-blur-xl p-space-md rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] hidden sm:flex items-center gap-space-md max-w-xs z-20">
+<div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">1.2M Total Reach</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+124%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Combined multi-network 48h</span>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-2 sm:-left-6 bg-surface-container-high/90 backdrop-blur-xl p-space-md rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] hidden sm:flex items-center gap-space-md max-w-xs z-20">
+<div class="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">alarm_on</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Automated Scheduler Engaged</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Next wave: 4 assets in 28m</span>
+</div>
+</div>
+<div class="absolute -bottom-6 -right-2 sm:-right-6 bg-surface-container-high/90 backdrop-blur-xl p-space-md rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.6)] hidden sm:flex items-center gap-space-md max-w-xs z-20">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Zero Lag Gateway</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">38ms</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direct API socket connection</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- STATS TICKER STRIP -->
+<section class="w-full bg-surface-container-lowest py-space-lg shadow-[0_1px_12px_rgba(0,0,0,0.4)]">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter text-center lg:text-left">
+<div class="flex flex-col gap-space-xs p-space-sm">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold tracking-tight">2M+</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Active Creators</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Orchestrating daily channels</span>
+</div>
+<div class="flex flex-col gap-space-xs p-space-sm">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold tracking-tight">10M+</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider">Posts Dispatched</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Synchronized across endpoints</span>
+</div>
+<div class="flex flex-col gap-space-xs p-space-sm">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold tracking-tight">99.98%</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Sync Reliability</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero dropped frame guarantee</span>
+</div>
+<div class="flex flex-col gap-space-xs p-space-sm">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold tracking-tight">4K 60fps</span>
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-wider">HDR Transcoding</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hardware-accelerated engine</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURE 1: MULTI-FORMAT DISPATCH ENGINE -->
+<section class="w-full py-space-xl relative overflow-hidden bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">dynamic_form</span>
+<span>FORMAT INTELLIGENCE</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Multi-Format Dispatch Engine
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-xs">
+            Format once, transcode endlessly. Choose your target format and let ConnectStream generate custom aspect ratios, subtitles, and chapter cues simultaneously.
+          </p>
+</div>
+<!-- Segmented Tab Switcher -->
+<div class="flex p-1 bg-surface-container-high rounded-xl max-w-fit overflow-x-auto" id="format-tabs">
+<button class="tab-btn px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-primary bg-primary-container shadow-md transition-all" data-tab="reels-shorts">Reels / Shorts</button>
+<button class="tab-btn px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="story-sync">Story Sync</button>
+<button class="tab-btn px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="full-video">Full 4K Video</button>
+<button class="tab-btn px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" data-tab="carousels">Photo Carousels</button>
+</div>
+</div>
+<!-- Feature Interactive Stage Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Upload Simulator & Pipeline Setup -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Interactive Studio Drag &amp; Drop Dropzone</span>
+<span class="text-secondary font-label-sm text-label-sm">High-Speed Gateway Ready</span>
+</div>
+<!-- Drag and Drop Dropzone -->
+<div class="w-full p-space-xl rounded-xl bg-surface-container/60 hover:bg-surface-container transition-all flex flex-col items-center justify-center text-center cursor-pointer group mb-space-md" id="dropzone">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high group-hover:scale-110 group-hover:bg-primary/20 flex items-center justify-center text-primary transition-all mb-space-sm shadow-[0_0_20px_rgba(160,120,255,0.2)]">
+<span class="material-symbols-outlined text-[36px]">cloud_upload</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Drag master video here, or <span class="text-secondary underline">browse files</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Supports ProRes, MP4, MKV up to 8K 120fps (HDR10+)</span>
+<div class="mt-space-md flex items-center gap-space-md">
+<span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> Auto-crop 9:16
+                </span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> AI Captioning
+                </span>
+<span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">check</span> Dual Meta Match
+                </span>
+</div>
+</div>
+<!-- Parameters Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Frame Rate Match</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">60.00 FPS Synced</span>
+<span class="font-label-sm text-label-sm text-secondary">Auto re-timed</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Color Profile</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">Rec.709 &amp; HLG</span>
+<span class="font-label-sm text-label-sm text-primary">No gamma shift</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Audio Normalization</span>
+<span class="font-headline-sm text-headline-sm text-on-surface block mt-1">-14 LUFS Dual</span>
+<span class="font-label-sm text-label-sm text-secondary">Platform certified</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,0.8)]"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Simulated Target: Instagram Reel &amp; YouTube Shorts</span>
+</div>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-primary hover:bg-surface-bright font-label-md text-label-md transition-all">Inspect Transcode Rules</button>
+</div>
+</div>
+<!-- Right: Live Active Output Preview Cards -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Dispatch Card Top -->
+<div class="bg-surface-container-low p-space-md rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex items-center gap-space-md">
+<div class="w-24 h-24 rounded-xl overflow-hidden bg-surface-container-high shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close up photography of electronic music visualizer synth display glowing with electric violet lines and dark aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj1nU216IWAQ-hTzTgnNJRZDUYB6lm3s6lyQ80CT3dL1OLH96a02_IPG3WM3DMCY471kEgAIlFbMebRTHnZZ4VmtABzXF8tjIJUDUSOIg0jTgVkYDDKS6SKLLUcFUG7SHQTF1-p_ca1DsL76hsgqz7s5hjrMuRqrDpdwKAYZKq0leM14ep_Ida-V2RLFuU8GeLJroCvCtiZTKuA6oZ9rENMfBjqYNrfRIyGm981lU"/>
+<span class="absolute bottom-1 right-1 px-1 rounded bg-black/80 font-label-sm text-label-sm text-on-surface">0:45</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm">Instagram</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">High Engagement Slot</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface block truncate">Behind The Scenes: Ep 12 Synthesizer Patch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Audio: Original Studio Audio (Stereo Master)</span>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<span class="text-secondary font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Auto-Published
+                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">2.4k views in 10m</span>
+</div>
+</div>
+</div>
+<!-- Dispatch Card Bottom -->
+<div class="bg-surface-container-low p-space-md rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex items-center gap-space-md">
+<div class="w-24 h-24 rounded-xl overflow-hidden bg-surface-container-high shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="High tech dynamic wide shot of professional video creator working in a dark minimalist studio with ambient purple neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmw7P6X6ePlLzrj9sS9b8IJMfKForK6vc5gu2QOghZkRpolo1CbSm_9I5qqSepyn0JjVdn4KFKC2BVII6xMG1v-7KNKZZ4KNOPL5aLY6Lnkins2xN7_Qg9LFvsIJTfsCAJ_QkJ0Nad7rsmr3xT6b7tTY-OISjiOQD6J9GABQp1NnycaDnc5ISworwU0mUA3MIfoSaFKbXJ5bxM8Zu8s09PGhymh9Jmf73uv2WiRR8"/>
+<span class="absolute bottom-1 right-1 px-1 rounded bg-black/80 font-label-sm text-label-sm text-on-surface">0:58</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container/30 text-error font-label-sm text-label-sm">YouTube Shorts</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm">SEO Optimized Title</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface block truncate">How I Build Ambient Textures in 60s</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Tags: #MusicTech #SoundDesign #ModularSynth</span>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<span class="text-secondary font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">sync</span> Transcoding HD 60p
+                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Queue ID: #YTS-9921</span>
+</div>
+</div>
+</div>
+<!-- Quick Stat Badge -->
+<div class="p-space-md rounded-2xl bg-gradient-to-r from-surface-container-high to-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Dispatch Velocity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Under 90 seconds to live servers</span>
+</div>
+</div>
+<span class="font-metric-display text-metric-display text-secondary font-bold">1.4x</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURE 2: CONSOLIDATED TELEMETRY & ANALYTICS RADAR -->
+<section class="w-full py-space-xl bg-surface-container-lowest relative">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-widest mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">radar</span>
+<span>DEEP TELEMETRY MATRIX</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Consolidated Analytics Radar
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-xs">
+            No more switching tabs between Meta Business Suite and YouTube Studio. Unify audience behavior, retention spikes, and payout velocity on a single chart.
+          </p>
+</div>
+<!-- Metric Filters -->
+<div class="flex items-center gap-space-xs bg-surface-container-high p-1 rounded-xl">
+<button class="chart-filter-btn px-space-md py-space-xs rounded-lg font-label-sm text-label-sm text-on-primary bg-primary shadow-sm" data-days="7">7 Days</button>
+<button class="chart-filter-btn px-space-md py-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" data-days="30">30 Days</button>
+<button class="chart-filter-btn px-space-md py-space-xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" data-days="90">90 Days</button>
+</div>
+</div>
+<!-- Main Radar Dashboard Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Big Area Chart Panel -->
+<div class="lg:col-span-8 bg-surface-container-low p-space-lg rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] flex flex-col justify-between">
+<div>
+<!-- Chart Header with Legend -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">AGGREGATED IMPRESSIONS</span>
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-metric-display text-metric-display text-on-surface font-extrabold" id="metric-total-views">4,892,100</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/20 px-space-xs py-0.5 rounded font-bold">+28.4%</span>
+</div>
+</div>
+<!-- Legend Markers -->
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,0.8)]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">YouTube Shorts (58%)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(160,120,255,0.8)]"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Instagram Reels (42%)</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Area Chart (Self-Contained Scalable Vector) -->
+<div class="relative w-full h-64 sm:h-72">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 260">
+<defs>
+<!-- Gradient for YouTube (Cyan) -->
+<lineargradient id="cyanArea" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+<!-- Gradient for Instagram (Violet) -->
+<lineargradient id="purpleArea" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#a078ff" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#a078ff" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Grid lines -->
+<line stroke="#31353f" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="40" y2="40"></line>
+<line stroke="#31353f" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line stroke="#31353f" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="160" y2="160"></line>
+<line stroke="#31353f" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="800" y1="220" y2="220"></line>
+<!-- YouTube Wave Area & Stroke -->
+<path d="M0,210 Q90,140 170,165 T360,110 T520,70 T680,85 T800,30 L800,240 L0,240 Z" fill="url(#cyanArea)"></path>
+<path d="M0,210 Q90,140 170,165 T360,110 T520,70 T680,85 T800,30" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Instagram Wave Area & Stroke -->
+<path d="M0,230 Q100,180 190,195 T380,150 T540,120 T690,135 T800,80 L800,240 L0,240 Z" fill="url(#purpleArea)"></path>
+<path d="M0,230 Q100,180 190,195 T380,150 T540,120 T690,135 T800,80" fill="none" stroke="#a078ff" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data point pins -->
+<circle class="shadow-lg animate-pulse" cx="520" cy="70" fill="#4cd7f6" r="5"></circle>
+<circle class="shadow-lg animate-pulse" cx="540" cy="120" fill="#a078ff" r="5"></circle>
+</svg>
+</div>
+<!-- Chart X Axis Labels -->
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-sm">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun (Peak)</span>
+</div>
+</div>
+<!-- Insight callout below chart -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_awesome</span>
+<span class="font-body-sm text-body-sm text-on-surface">Insight: Scheduling Thursday @ 17:00 UTC yielded a 42% surge in YouTube Shorts algorithm pickup.</span>
+</div>
+<a class="text-secondary font-label-sm text-label-sm underline hover:text-on-surface" href="#">Apply to all</a>
+</div>
+</div>
+<!-- Right: Head-to-Head Comparison Pillar -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Head to Head Comparison Card -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] flex flex-col gap-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Platform Split Breakdown</span>
+<!-- Instagram Row -->
+<div class="p-space-md rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">photo_camera</span>
+<span class="font-label-md text-label-md text-on-surface">Instagram Reels</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">+18.2% MoM</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 mb-space-xs">
+<div class="bg-primary h-full w-[62%] rounded-full shadow-[0_0_8px_rgba(208,188,255,0.7)]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Avg. Watch: 28.4s</span>
+<span class="text-on-surface font-semibold">1,940,200 Views</span>
+</div>
+</div>
+<!-- YouTube Row -->
+<div class="p-space-md rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">smart_display</span>
+<span class="font-label-md text-label-md text-on-surface">YouTube Shorts</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+34.8% MoM</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 mb-space-xs">
+<div class="bg-secondary h-full w-[84%] rounded-full shadow-[0_0_8px_rgba(76,215,246,0.8)]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Avg. Watch: 41.2s</span>
+<span class="text-on-surface font-semibold">2,951,900 Views</span>
+</div>
+</div>
+<!-- Retention Radar Spark -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Audience Cross-Pollination</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold block mt-1">31.4% Overlap</span>
+<span class="font-body-sm text-body-sm text-secondary">Followers active on both platforms</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+</div>
+</div>
+<!-- Micro Pulse Metric -->
+<div class="bg-gradient-to-r from-primary-container/20 to-secondary-container/20 p-space-md rounded-2xl flex items-center gap-space-md shadow-lg">
+<span class="material-symbols-outlined text-primary text-[28px]">auto_graph</span>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Smart Growth Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated hashtag and timing testing running live</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURE 3: DUAL CREATOR WORKFLOW (LIVE SYNC CONNECTION PROOF) -->
+<section class="w-full py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span>HIGH-FIDELITY PIPELINE</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          Dual Creator Workflow in Motion
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+          Connect your existing verified accounts once. From that moment onward, your single upload queue powers both global video engines with custom platform nuances.
+        </p>
+</div>
+<!-- Creator Ecosystem Terminal Card -->
+<div class="w-full bg-surface-container-low rounded-2xl p-space-lg shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+<!-- Creator Header Identity -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-lg mb-space-lg bg-surface-container-low">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high overflow-hidden shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Portrait photography of a trendy digital content creator and filmmaker wearing headphones in a neon-lit cyberpunk creative suite studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAScwqPkutTi_BeD8KrZsXaiO3e_Vwb93-EXuviYyVg4lchrxfZ-5wcxXYHLjfLNxz_a_7u66K5gWkenB60o4ldDgtqXiTX-V2vYyVAvmO_koq9dUzyv8FSYzLgs9N6-XoXDKvegR9I5SKQTAL6lO6kWZFwZJwtt6DWmt1k50emjSjgv8caYLjdqRD_EQhe4joEOJiVcPll4ixritLHEgHKYVxwMcHkp2APhhb6WzI"/>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Alex Rivers Studio</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Creator Tier: Enterprise Production // Priority Gateway</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              2 CHANNELS SYNCED
+            </span>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all">Configure Keys</button>
+</div>
+</div>
+<!-- Split Platform Connectors Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Instagram Business Sync Card -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">camera_alt</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">@alexrivers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instagram Business</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-md bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ACTIVE
+                </span>
+</div>
+<!-- Metrics -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Audience</span>
+<span class="font-metric-display text-metric-display text-on-surface block">156.2K</span>
+<span class="font-label-sm text-label-sm text-secondary">+1.4k this week</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Avg Reel Plays</span>
+<span class="font-metric-display text-metric-display text-on-surface block">84.9K</span>
+<span class="font-label-sm text-label-sm text-primary">High retention</span>
+</div>
+</div>
+<div class="space-y-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>Reel Direct Feed API:</span>
+<span class="text-on-surface">Connected (Graph API v20)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>Auto-Cover Frame Detection:</span>
+<span class="text-secondary font-semibold">Enabled (AI Powered)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>Collaborator Auto-Invite:</span>
+<span class="text-on-surface">Active</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last ping: 4 seconds ago</span>
+<button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm hover:bg-primary transition-all">Manage Instagram</button>
+</div>
+</div>
+<!-- YouTube Channel Sync Card -->
+<div class="p-space-lg rounded-xl bg-surface-container flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">video_library</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Alex Rivers Films</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">YouTube Partner Channel</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded-md bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ACTIVE
+                </span>
+</div>
+<!-- Metrics -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Subscribers</span>
+<span class="font-metric-display text-metric-display text-on-surface block">92.4K</span>
+<span class="font-label-sm text-label-sm text-secondary">+880 this week</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Shorts Feed Views</span>
+<span class="font-metric-display text-metric-display text-on-surface block">412.0K</span>
+<span class="font-label-sm text-label-sm text-secondary">+29.1% surge</span>
+</div>
+</div>
+<div class="space-y-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>YouTube Data API v3:</span>
+<span class="text-on-surface">Connected (OAuth Verified)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>Default Monetization:</span>
+<span class="text-secondary font-semibold">Enabled (All Shorts ads)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-space-sm rounded">
+<span>Auto-Pinned Related Long-Form:</span>
+<span class="text-on-surface">Auto-Linked</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last ping: 2 seconds ago</span>
+<button class="px-space-md py-space-xs rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-all">Manage YouTube</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL PROOF & TESTIMONIALS -->
+<section class="w-full py-space-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-space-xs">CREATOR TESTIMONIALS</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Built For High-Output Production Teams</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">See how industry-leading creator collectives deploy daily content at cybernetic speed.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-lg leading-relaxed">
+              "We went from spending 3 hours every single evening exporting vertical crops and manually uploading to Instagram and YouTube, to doing it all in 2 minutes. The auto-hashtag sync alone doubled our initial reach."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-md bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait photography of a professional media producer and creative studio director with sleek spectacles in modern dark studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqr7JEq6-IMLkemF66Ol_GI8rucbJTbpbtHZPThi4bxMYaxjPOmvJLc1SkZwlLUAawHe1HFIVHT2RWc5b6mVQMKs1Rxml2Bno-CDXn4acyeRpCWRkVtvHwdJDu1g3F9CqWU_gE7-TV2Tx-n876Lq4CbKMG4JbtAvFPOTBkFQHyXka66SRUcG4FQyJw-p_6lqDFpknbkkZPPlUT4RYvbW3_pJHF3mz5kAkq5kqbhrs"/>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Editor, Pulse Media Studio (1.8M subs)</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-lg leading-relaxed">
+              "The transcode precision is breathtaking. Most third-party tools butcher video quality and destroy gamma levels when converting. ConnectStream keeps my 4K ProRes renders pristine on both platforms."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-md bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a female digital cinematographer and colorist in front of high end color grading monitors with neon ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7rgZw1btegbx8KgUgtdSfsego1381RoWys9AEsFioLQsAuLO8ZUBZF9XdloZFtsbVsD-DCGhOdEoeD2afAlPu0Fld-70Jl4LtJSmtmP65NFxtF2EGLSzBynmlYAObCHlS61cuO5yvj740MKmHd4C3s3xqw4YmS3JxZODeap3eCoQ3W3sDBBdWd_IKMW-UO3DLVRF_ZNxVEaIMq6V-gXcXwk-n8UgsIz5QzgqyOs"/>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Elena Thorne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cinematographer &amp; Motion Artist</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-1 text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-lg leading-relaxed">
+              "Having unified analytics under one roof changed our production strategy. Seeing instant retention drop-offs for Instagram Reels alongside YouTube Shorts in real-time helped us tweak our pacing."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-md bg-surface-container-low">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a youthful electronic music producer and visual creator wearing dark minimal streetwear in studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Jz6heis6UJni-o5t5rrjL4dC8Bc7PZEIBtJ_k6vajVfc0ONxffSkcUVNm7JNeqrCSk66AWKJHojiJtAa_yvCMT6lzxT62apqMxUMhuWh7MhIQOZG6yU7sDagt9MS_f5IO3kz-7UBjH8eCmYv7wJopdNV5SL4vTl-qYNxW_rklwIkoU62xijsc6JgRb8qFozOXbWyQZcc70Zn6I2s1mSqQ4o2tgOuBB4O9qG3lT4"/>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Devon Kael</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Founder, Kael Soundworks</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CONVERSION BANNER -->
+<section class="w-full py-space-xl bg-surface relative overflow-hidden">
+<div class="max-w-5xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Conversion Frame with Cybernetic Gradient Flare -->
+<div class="relative rounded-3xl bg-gradient-to-b from-surface-container-high via-surface-container-low to-surface-container-lowest p-space-lg sm:p-space-xl text-center shadow-[0_0_80px_rgba(160,120,255,0.18)] overflow-hidden">
+<!-- Ambient Background Glow behind Card -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary-container/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="absolute -bottom-32 right-12 w-80 h-80 bg-secondary/15 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center">
+<!-- Small Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-space-md">
+<span class="material-symbols-outlined text-[16px]">rocket_launch</span>
+<span>ACCELERATE YOUR SOCIAL CHANNELS</span>
+</div>
+<h2 class="font-display-hero text-display-hero max-w-3xl text-on-surface tracking-tight mb-space-md">
+            Your Content. Your Rules. <br/>
+<span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">Unleash seamless dual-platform growth.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl">
+            Join thousands of modern creators synchronizing their vertical video workflows across Instagram Reels and YouTube Shorts effortlessly.
+          </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-md mb-space-md">
+<a class="px-space-xl py-space-md rounded-xl bg-gradient-to-r from-primary-container via-inverse-primary to-secondary-container text-on-primary font-label-lg text-label-lg shadow-[0_0_30px_rgba(160,120,255,0.5)] hover:shadow-[0_0_40px_rgba(160,120,255,0.8)] hover:scale-[1.03] transition-all flex items-center gap-space-sm" data-path="get-started-free" href="#">
+<span>Start 14-Day Free Trial</span>
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</a>
+<a class="px-space-lg py-space-md rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-bright transition-all" data-path="pricing" href="#">
+              Compare Studio Plans
+            </a>
+</div>
+<!-- Assurance Tags -->
+<div class="flex flex-wrap items-center justify-center gap-space-lg text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+              No credit card required
+            </span>
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+              Instant API handshake
+            </span>
+<span class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+              Cancel anytime in 1 click
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL: 2-MIN DEMO VIDEO PLAYER (Self-contained Interactive Micro-interaction) -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-space-md" id="demo-modal">
+<div class="relative w-full max-w-4xl bg-surface-container-low rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(0,0,0,0.9)]">
+<div class="px-space-lg py-space-md bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">play_circle</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">ConnectStream 2-Min Interactive Overview</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-bright flex items-center justify-center text-on-surface" id="close-demo-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative aspect-video w-full bg-black flex items-center justify-center group">
+<img class="w-full h-full object-cover opacity-85" data-alt="High tech software video player preview interface displaying dual Instagram Reels and YouTube Shorts video synchronization pipeline controls with audio waveforms in violet and electric cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU-v1fQW2lk8r9sgybklNPMYvfYWGXGTxavf_ssJuQA6YjIv5FvbOvf2-0oVaXvhtj0HbXQY47m4siPSLQ23kWxS2pbhGJuKDnp6duA6oSW2LYe8-Q6MFocnBJnxHmjuxfwTPrtkKzNg3UhG5cyq1PcFmH_BuofKCMOtpsa3475qLtqxBAZCIk_kBu_X-BncNRqFTJ2ge7Wg8PjUyO_pYfHKd1gkAO1Ij08MgnDpo"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<button class="w-20 h-20 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_40px_rgba(160,120,255,0.7)] group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[42px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-on-surface font-label-sm text-label-sm bg-surface-container-lowest/80 backdrop-blur-md p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">volume_up</span>
+<span>Simulated 4K Cross-Sync Transcode (02:00)</span>
+</div>
+<span class="text-secondary">Ready to play</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Logic for Demo Modal, Tab Switcher & Chart Filters -->
+<script>
+    (function initConnectStreamLanding() {
+      // 1. Video Modal Trigger
+      const modal = document.getElementById('demo-modal');
+      const openBtn = document.getElementById('open-demo-modal');
+      const closeBtn = document.getElementById('close-demo-modal');
+
+      if (openBtn && modal) {
+        openBtn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        });
+      }
+
+      if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+      }
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+        });
+      }
+
+      // 2. Interactive Feature Tabs Switcher
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-md');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-md');
+          btn.classList.remove('text-on-surface-variant');
+        });
+      });
+
+      // 3. Analytics 7-day Filter switcher
+      const filterBtns = document.querySelectorAll('.chart-filter-btn');
+      const totalViews = document.getElementById('metric-total-views');
+      
+      const viewsMap = {
+        '7': '4,892,100',
+        '30': '18,410,950',
+        '90': '64,228,400'
+      };
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.remove('text-on-surface-variant');
+
+          const days = btn.getAttribute('data-days');
+          if (totalViews && viewsMap[days]) {
+            totalViews.textContent = viewsMap[days];
+          }
+        });
+      });
+
+      // 4. Dropzone Interactive Simulation
+      const dropzone = document.getElementById('dropzone');
+      if (dropzone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropzone.classList.add('bg-primary-container/20');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('bg-primary-container/20');
+          }, false);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_12px_rgba(0,0,0,0.5)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-lg"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">stream</span></div><span class="font-headline-sm text-headline-sm text-on-surface">Connect<span class="text-secondary">Stream</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">High-performance cross-platform video orchestration terminal built for creators, media production studios, and multi-network channels.</p><div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low max-w-fit shadow-[0_0_12px_rgba(76,215,246,0.15)]"><span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,0.8)]"></span><span class="font-label-sm text-label-sm text-secondary">All Video Pipelines Operational</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Product</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Studio Sync</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product" href="#">Multi-Stream Router</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product" href="#">Automated Shorts</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Enterprise Dedicated</a></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Resources</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Creator Documentation</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">API Reference</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Release Radar</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Community Hub</a></div><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Ecosystem</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product" href="#">YouTube Engine</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product" href="#">Instagram Reels API</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="product" href="#">TikTok Bridge</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Platform Status</a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-lowest"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 ConnectStream Inc. All rights reserved. Precision cloud distribution engineered for digital creators.</span><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="resources" href="#">Security Vault</a></div></div></div></footer></body></html>
